@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+
+<Devices>
+	<!-- This custom device illustrates how a plugin can update custom device
+	states which can be used in Device State Changed triggers, conditionals,
+	and inspected on Control Pages. The python runConcurrentThread() method
+	will update the states every second.
+	-->
+	<Device type="custom" id="zpower">
+		<Name>ZWave Power Logger</Name>
+		<ConfigUI>
+			<Field id="deviceId" type="menu">
+				<Label>Actual ZWave Device:</Label>
+				<List class="indigo.devices" filter="indigo.zwave"/>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="totalpowercalc">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Total Power Usage Calculated</TriggerLabel>
+				<ControlPageLabel>Total Power Usage Calculated</ControlPageLabel>
+			</State>
+			<State id="totalpowerrep">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Total Power Usage Reported</TriggerLabel>
+				<ControlPageLabel>Total Power Usage Reported</ControlPageLabel>
+			</State>
+			<State id="socket1power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 1 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 1 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket2power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 2 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 2 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket3power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 3 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 3 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket4power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 4 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 4 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket5power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 5 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 5 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket6power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 6 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 6 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket7power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 7 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 7 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket8power">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 8 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 8 Power Usage</ControlPageLabel>
+			</State>
+			<State id="totalenergycalc">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Total Energy Used Calculated</TriggerLabel>
+				<ControlPageLabel>Total Energy Used Calculated</ControlPageLabel>
+			</State>
+			<State id="totalenergyrep">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Total Energy Used</TriggerLabel>
+				<ControlPageLabel>Total Energy Used</ControlPageLabel>
+			</State>
+			<State id="socket1energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 1 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 1 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket2energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 2 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 2 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket3energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 3 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 3 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket4energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 4 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 4 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket5energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 5 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 5 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket6energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 6 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 6 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket7energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 7 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 7 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket8energy">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 8 Power Usage</TriggerLabel>
+				<ControlPageLabel>Socket 8 Power Usage</ControlPageLabel>
+			</State>
+			<State id="socket1stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 1 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 1 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket2stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 2 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 2 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket3stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 3 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 3 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket4stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 4 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 4 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket5stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 5 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 5 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket6stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 6 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 6 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket7stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 7 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 7 Timestamp</ControlPageLabel>
+			</State>
+			<State id="socket8stamp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Socket 8 Timestamp</TriggerLabel>
+				<ControlPageLabel>Socket 8 Timestamp</ControlPageLabel>
+			</State>
+			<UiDisplayStateId>totalpowerrep</UiDisplayStateId>
+		</States>
+	</Device>
+
+		<Device type="custom" id="ztemp">
+		<Name>ZWave Temperature Logger</Name>
+		<ConfigUI>
+			<Field id="deviceId" type="menu">
+				<Label>Actual ZWave Device:</Label>
+				<List class="indigo.devices" filter="indigo.zwave"/>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="humidity">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Humidity</TriggerLabel>
+				<ControlPageLabel>Humidity</ControlPageLabel>
+			</State>
+			<State id="humiditystamp">
+				<ValueType>string</ValueType>
+				<TriggerLabel>Humidity Timestamp</TriggerLabel>
+				<ControlPageLabel>Humidity Timestamp</ControlPageLabel>
+			</State>
+			<State id="temp1">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Temperature 1</TriggerLabel>
+				<ControlPageLabel>Temperature 1</ControlPageLabel>
+			</State>
+			<State id="temp2">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Temperature 2</TriggerLabel>
+				<ControlPageLabel>Temperature 2</ControlPageLabel>
+			</State>
+			<State id="temp3">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Temperature 3</TriggerLabel>
+				<ControlPageLabel>Temperature 3</ControlPageLabel>
+			</State>
+			<State id="temp4">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Temperature 4</TriggerLabel>
+				<ControlPageLabel>Temperature 4</ControlPageLabel>
+			</State>
+			<State id="temp5">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Temperature 5</TriggerLabel>
+				<ControlPageLabel>Temperature 5</ControlPageLabel>
+			</State>
+			<State id="temp1stamp">
+				<ValueType>string</ValueType>
+				<TriggerLabel>Temperature 1 Timestamp</TriggerLabel>
+				<ControlPageLabel>Temperature 1 Timestamp</ControlPageLabel>
+			</State>
+			<State id="temp2stamp">
+				<ValueType>string</ValueType>
+				<TriggerLabel>Temperature 2 Timestamp</TriggerLabel>
+				<ControlPageLabel>Temperature 2 Timestamp</ControlPageLabel>
+			</State>
+			<State id="temp3stamp">
+				<ValueType>string</ValueType>
+				<TriggerLabel>Temperature 3 Timestamp</TriggerLabel>
+				<ControlPageLabel>Temperature 3 Timestamp</ControlPageLabel>
+			</State>
+			<State id="temp4stamp">
+				<ValueType>string</ValueType>
+				<TriggerLabel>Temperature 4 Timestamp</TriggerLabel>
+				<ControlPageLabel>Temperature 4 Timestamp</ControlPageLabel>
+			</State>
+			<State id="temp5stamp">
+				<ValueType>string</ValueType>
+				<TriggerLabel>Temperature 5 Timestamp</TriggerLabel>
+				<ControlPageLabel>Temperature 5 Timestamp</ControlPageLabel>
+			</State>
+			<UiDisplayStateId>temp1</UiDisplayStateId>
+		</States>
+	</Device>
+
+</Devices>

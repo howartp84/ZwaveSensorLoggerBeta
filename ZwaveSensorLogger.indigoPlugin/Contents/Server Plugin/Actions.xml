@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Actions>
+	<Action id="getPowerAll" deviceFilter="self.zpower">
+		<Name>Request Power Levels</Name>
+		<CallbackMethod>getPowerAll</CallbackMethod>
+	</Action>
+
+	<Action id="resetPower" deviceFilter="self.zpower">
+		<Name>Reset Power Levels</Name>
+		<CallbackMethod>resetPower</CallbackMethod>
+	</Action>
+
+	<Action id="getTemps" deviceFilter="self.ztemp">
+		<Name>Request Temperature Reports</Name>
+		<CallbackMethod>getTempAll</CallbackMethod>
+	</Action>
+
+	<Action id="getTemp" deviceFilter="self.ztemp">
+		<Name>Request Temperature for Endpoint</Name>
+		<CallbackMethod>getTemp</CallbackMethod>
+		<ConfigUI>
+			<Field id="endpoint" type="menu" defaultValue="1">
+				<Label>Endpoint:</Label>
+				<List>
+					<Option value="1">1</Option>
+					<Option value="2">2</Option>
+					<Option value="3">3</Option>
+					<Option value="4">4</Option>
+					<Option value="5">5</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+</Actions>
